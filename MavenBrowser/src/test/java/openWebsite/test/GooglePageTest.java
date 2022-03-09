@@ -5,7 +5,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.annotations.Test;
 
-public class GoogleCloudTest extends AbstractTest {
+public class GooglePageTest extends AbstractTest {
     GoogleMainPage mainPage;
     private final Logger logger = LogManager.getRootLogger();
 
