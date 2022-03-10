@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Fibbonachi {
+public class Fibonacci {
     public static int getFibonacciValue(int n) {
         if (n <= 1) {
             return 0;
@@ -17,8 +17,8 @@ public class Fibbonachi {
 
     public static void main(String[] args) {
         List<Integer> numbers = new ArrayList(Arrays.asList(3, 5, 8, 13, 20));
-        for (int i = 0; i < numbers.size(); i++) {
-            System.out.println(numbers.get(i) +" - ое число Фиббоначчи: " + getFibonacciValue(numbers.get(i)));
+        for (Integer number : numbers) {
+            System.out.println(number + " - ое число Фиббоначчи: " + getFibonacciValue(number));
         }
     }
 }

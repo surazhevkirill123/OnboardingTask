@@ -1,0 +1,6 @@
+openGoogle\service\TestDataReader.class
+openGoogle\test\GooglePageTest.class
+openGoogle\driver\DriverSingleton.class
+openGoogle\test\AbstractTest.class
+openGoogle\page\GoogleMainPage.class
+openGoogle\page\AbstractPage.class
