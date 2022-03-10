@@ -4,7 +4,7 @@
 <suite name="googleCloudTest" verbose="1" >
     <test name="GoogleCloudTest"   >
         <classes>
-            <class name="openWebsite.test.GooglePageTest"></class>
+            <class name="openWebsiteTestNG.test.GoogleSearchPageTest"></class>
         </classes>
     </test>
 </suite>

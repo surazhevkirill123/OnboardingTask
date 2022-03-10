@@ -1,6 +1,8 @@
-openGoogle\service\TestDataReader.class
-openGoogle\test\GooglePageTest.class
-openGoogle\driver\DriverSingleton.class
-openGoogle\test\AbstractTest.class
-openGoogle\page\GoogleMainPage.class
-openGoogle\page\AbstractPage.class
+openWebsiteTestNG\service\TestDataCreator.class
+openWebsiteTestNG\model\TestData.class
+openWebsiteTestNG\test\GoogleSearchPageTest.class
+openWebsiteTestNG\test\AbstractTest.class
+openWebsiteTestNG\page\GoogleSearchPage.class
+openWebsiteTestNG\page\GoogleTranslatorPage.class
+openWebsiteTestNG\service\TestDataReader.class
+openWebsiteTestNG\test\GoogleTranslatorPageTest.class
