@@ -1,18 +1,18 @@
-package openGoogle.test;
+package openWebsite.test;
 
-import openGoogle.page.GoogleMainPage;
+import openWebsite.page.PropertyPage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.annotations.Test;
 
 public class GooglePageTest extends AbstractTest {
-    GoogleMainPage mainPage;
+    PropertyPage propertyPage;
     private final Logger logger = LogManager.getRootLogger();
 
     @Test(description = "Open Google")
-    public void openGoogle() {
-        mainPage = new GoogleMainPage(driver)
-                .openPage();
+    public void openPage() {
+        propertyPage = new PropertyPage(driver)
+                .openPage(testData.getWebsite());
         logger.info("Google is opened");
     }
 }
