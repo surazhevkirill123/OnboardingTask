@@ -12,72 +12,72 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class GoogleSearchPageTest extends AbstractTest {
-    GoogleSearchPage propertyPage;
+    GoogleSearchPage googlesearchPage;
     private final Logger logger = LogManager.getRootLogger();
 
     @BeforeTest(description = "Open Google")
     public void openPage() {
-        propertyPage = open(testData.getWebsite(), GoogleSearchPage.class);
+        googlesearchPage = open(testData.getWebsite(), GoogleSearchPage.class);
         logger.info("GoogleSearch is opened");
     }
 
     @Test
     public void testCountry() {
-        assertThat("Беларусь", equalTo(propertyPage.getCountry()));
+        assertThat("Беларусь", equalTo(googlesearchPage.getCountry()));
         logger.info("Tested");
     }
 
     @Test
     public void testAllAboutGoogle() {
-        assertThat("Всё о Google", equalTo(propertyPage.getAllAboutGoogle()));
+        assertThat("Всё о Google", equalTo(googlesearchPage.getAllAboutGoogle()));
         logger.info("Tested");
     }
 
     @Test
     public void testAd() {
-        assertThat("Реклама", equalTo(propertyPage.getAd()));
+        assertThat("Реклама", equalTo(googlesearchPage.getAd()));
         logger.info("Tested");
     }
 
     @Test
     public void testForBusiness() {
-        assertThat("Для бизнеса", equalTo(propertyPage.getForBusiness()));
+        assertThat("Для бизнеса", equalTo(googlesearchPage.getForBusiness()));
         logger.info("Tested");
     }
 
     @Test
     public void testHowWorksGoogleSearch() {
-        assertThat("Как работает Google Поиск", equalTo(propertyPage.getHowWorksGoogleSearch()));
+        assertThat("Как работает Google Поиск", equalTo(googlesearchPage.getHowWorksGoogleSearch()));
         logger.info("Tested");
     }
 
     @Test
     public void testConfidentiality() {
-        assertThat("Конфиденциальность", equalTo(propertyPage.getConfidentiality()));
+        assertThat("Конфиденциальность", equalTo(googlesearchPage.getConfidentiality()));
         logger.info("Tested");
     }
 
     @Test
     public void testTerms() {
-        assertThat("Условия", equalTo(propertyPage.getTerms()));
+        assertThat("Условия", equalTo(googlesearchPage.getTerms()));
         logger.info("Tested");
     }
 
     @Test
     public void testMail() {
-        assertThat("Почта", equalTo(propertyPage.getMail()));
+        assertThat("Почта", equalTo(googlesearchPage.getMail()));
         logger.info("Tested");
     }
 
     @Test
     public void testPicturesBlabla() {
-        assertThat("Картинки", equalTo(propertyPage.getPictures()));
+        assertThat("Картинки", equalTo(googlesearchPage.getPictures()));
         logger.info("Tested");
     }
 
     @Test
     public void testSettingsBlabla() {
-        assertThat("Настройк", equalTo(propertyPage.getSettings()));
+        assertThat("Настройк", equalTo(googlesearchPage.getSettings()));
         logger.info("Tested");
     }
 }
