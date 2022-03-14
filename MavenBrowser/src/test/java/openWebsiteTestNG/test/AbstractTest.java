@@ -1,6 +1,7 @@
 package openWebsiteTestNG.test;
 
 import com.codeborne.selenide.Configuration;
+import com.epam.reportportal.testng.ReportPortalTestNGListener;
 import openWebsiteTestNG.model.TestData;
 import openWebsiteTestNG.service.TestDataCreator;
 import openWebsiteTestNG.util.TestListener;
@@ -10,7 +11,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
 
-@Listeners({TestListener.class})
+@Listeners({TestListener.class, ReportPortalTestNGListener.class})
 public class AbstractTest {
     private final Logger logger = LogManager.getRootLogger();
     protected TestData testData;
