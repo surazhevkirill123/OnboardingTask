@@ -53,4 +53,45 @@ public class RESTAssured {
 //                "Password": "174035"
 //        }
     }
+
+    @Test
+    public void UpdateRecordsWinthPut(){
+        int empid = 15410;
+        RestAssured.baseURI ="http://dummy.restapiexample.com/api/v1/";
+        RequestSpecification request = RestAssured.given();
+        JSONObject requestParams = new JSONObject();
+        requestParams.put("name", "TestDate");
+        requestParams.put("age", 23);
+        requestParams.put("salary", 12000);
+        request.body(requestParams.toString());
+        Response response = request.put("/update/"+ empid);
+        int statusCode = response.getStatusCode();
+        System.out.println(response.asString());
+        Assert.assertEquals(statusCode, 200);
+
+//        В данном примере можно увидеть, что переменная empid = 15410 — это то, что будет обновляться нашим запросом.
+//        После этого создается запрос, указывающий на конечную точку службы и создается JSON запрос, содержащий все поля,
+//        которые будут обновлены. С помощью request.put отправляется запрос, и проверяется, что ответ — 200. Все это,
+//        кроме самого первого шага, полностью перекликается с предыдущим запросом.
+    }
+
+    @Test
+    public void delete() {
+        int empid = 15410;
+        RestAssured.baseURI = "https://dummy.restapiexample.com/api/v1";
+        RequestSpecification request = RestAssured.given();
+        request.header("Content-Type", "application/json");
+        // Delete the request and check the response
+        Response response = request.delete("/delete/"+ empid);
+        int statusCode = response.getStatusCode();
+        System.out.println(response.asString());
+        Assert.assertEquals(statusCode, 200);
+        String jsonString =response.asString();
+        Assert.assertEquals(jsonString.contains("successfully! deleted Records"), true);
+        Assert.assertEquals(statusCode, 404);
+        String jsonString2 =response.asString();
+        Assert.assertEquals(jsonString2.contains("Record to delete not found"), true);
+
+//        При завершении выполнения запроса будет удалена запись, которую мы изменяли ранее (empid = 15410).
+    }
 }
